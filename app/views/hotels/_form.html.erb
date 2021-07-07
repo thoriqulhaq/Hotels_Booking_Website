@@ -1,0 +1,57 @@
+<%= form_with(model: hotel) do |form| %>
+  <% if hotel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hotel.errors.count, "error") %> prohibited this hotel from being saved:</h2>
+
+      <ul>
+        <% hotel.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br>
+  <br>
+
+  <div class="field form-group">
+    <%= form.text_field :room_num, class:"field form-control", placeholder:"Room Number"%>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.text_field :first_name, class:"field form-control", placeholder:"First Name"%>
+  </div>
+
+  <br>
+
+  <div class="fiel form-group">
+    <%= form.text_field :last_name, class:"field form-control", placeholder:"Last Name"%>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.text_field :phone_num, class:"field form-control", placeholder:"Phone Number"%>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.text_field :start_date, class:"field form-control", placeholder:"Start Date"%>
+  </div>
+
+  <br>
+
+  <div class="field form-group">
+    <%= form.text_field :end_date, class:"field form-control", placeholder:"End Date"%>
+  </div>
+
+  <br>
+  <br>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-danger" %>
+  </div>
+<% end %>

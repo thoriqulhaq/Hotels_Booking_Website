@@ -1,0 +1,29 @@
+<br>
+<br>
+
+<div class="jumbotron">
+
+  <h1 class="display-4 text-danger">
+    <%= @hotel.first_name %> <%= @hotel.last_name %>
+  </h1>
+
+  
+
+  <p class="lead text-danger">
+    <b><%= @hotel.phone_num %></b> 
+  </p>
+
+  <hr class="my-4">
+
+  <p class="lead text-danger">
+    <b>Room <%= @hotel.room_num %></b> (<%= @hotel.start_date %> - <%= @hotel.end_date %>)
+  </p>
+
+
+  <br>
+  <br>
+
+  <%= link_to 'Edit', edit_hotel_path(@hotel), class:"btn btn-danger" %>
+  <%= link_to 'Back', hotels_path, class:"btn btn-light btn btn-outline-danger" %>
+  
+</div>
